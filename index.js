@@ -23,7 +23,7 @@ const connect = () => {
 
 //middleware
 app.use(cookieParser())
-app.use(cors({ credentials: true }))
+app.use(cors({ credentials: true, origin: "*" }))
 app.use(express.json())
 
 
