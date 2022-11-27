@@ -2,21 +2,17 @@ import mongoose from "mongoose";
 
 const UserSchema = new mongoose.Schema({
     nome: {
-        type: String,
-        required: true
+        type: String
     },
     cognome: {
-        type: String,
-        required: true
+        type: String
     },
     telefono: {
-        type: String,
-        required: true
+        type: String
     },
     email: {
         type: String,
-        required: true,
-        unique: true
+        required: true
     },
     password: {
         type: String,
@@ -48,6 +44,10 @@ const UserSchema = new mongoose.Schema({
         default: []
     },
     fromGoogle: {
+        type: Boolean,
+        default: false
+    },
+    isAdmin: {
         type: Boolean,
         default: false
     }
